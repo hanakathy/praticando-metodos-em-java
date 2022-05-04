@@ -78,24 +78,24 @@ public class exercicio {
 
 	public static void calcularAreaQuad() {
 		// calcula area de quadriláteros
-		double ladoQ, ladoRetMaior, ladoRetMenor;
-		double baseMaiorT, baseMenorT, alturaT;
+		double ladoQ, quadrado, ladoRetMaior, ladoRetMenor, retangulo;
+		double baseMaiorT, baseMenorT, alturaT, trapezio, losango;
 		float diagonalA, diagonalB;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("++Calcular Área Quadrado++");
+		System.out.println("+++ Calcular Área Quadrado +++");
 		System.out.println("Digite o tamanho do lado:");
 		ladoQ = scan.nextDouble();
 		System.out.println("");
 
-		System.out.println("++Calcular Área Retângulo++");
+		System.out.println("+++ Calcular Área Retângulo +++");
 		System.out.println("Digite o tamanho do lado maior:");
 		ladoRetMaior = scan.nextDouble();
 		System.out.println("Digite o tamanho do lado menor:");
 		ladoRetMenor = scan.nextDouble();
 		System.out.println("");
 
-		System.out.println("++Calcular Área Trapézio++");
+		System.out.println("+++ Calcular Área Trapézio +++");
 		System.out.println("Digite o tamanho da base maior:");
 		baseMaiorT = scan.nextDouble();
 		System.out.println("Digite o tamanho da base menor:");
@@ -104,7 +104,7 @@ public class exercicio {
 		alturaT = scan.nextDouble();
 		System.out.println("");
 
-		System.out.println("++Calcular Área Losango++");
+		System.out.println("+++ Calcular Área Losango +++");
 		System.out.println("Digite o tamanho da diagonal maior:");
 		diagonalA = scan.nextFloat();
 		System.out.println("Digite o tamanho da diagonal menor:");
@@ -112,9 +112,16 @@ public class exercicio {
 		System.out.println("");
 
 		// Chamando os métodos
-		comecando.areaQuadrilatero.calcularArea(ladoQ);
-		comecando.areaQuadrilatero.calcularArea(ladoRetMaior, ladoRetMenor);
-		comecando.areaQuadrilatero.calcularArea(baseMenorT, baseMaiorT, alturaT);
-		comecando.areaQuadrilatero.calcularArea(diagonalA, diagonalB);
+		quadrado = comecando.areaQuadrilatero.calcularArea(ladoQ);
+		System.out.println("Área do Quadrado: "+quadrado);
+		
+		retangulo = comecando.areaQuadrilatero.calcularArea(ladoRetMaior, ladoRetMenor);
+		System.out.println("\nÁrea do Retângulo: "+retangulo);
+		
+		trapezio = comecando.areaQuadrilatero.calcularArea(baseMenorT, baseMaiorT, alturaT);
+		System.out.println("\nÁrea do Trapézio: "+trapezio);
+		
+		losango = comecando.areaQuadrilatero.calcularArea(diagonalA, diagonalB);
+		System.out.println("\nÁrea do Losango: "+losango);
 	}
 }
